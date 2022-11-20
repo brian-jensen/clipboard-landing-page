@@ -1,0 +1,33 @@
+:root
+  --font-primary: 'Bai Jamjuree', sans-serif
+
+*, *::before, *::after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  font-family: var(--font-primary)
+
+input, select, textarea, button
+  border: none
+  box-shadow: none
+  outline: none
+  background: none
+
+a
+  text-decoration: none
+  &:link,
+  &:visited,
+  &:hover,
+  &:active
+    color: inherit
+
+ul, ol
+  list-style: none
+
+.wrapper
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh
