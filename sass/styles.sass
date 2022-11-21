@@ -1,5 +1,8 @@
 :root
   --font-primary: 'Bai Jamjuree', sans-serif
+  --color-heading-primary: hsl(210, 9.5%, 32.9%)
+  --color-text-primary: hsl(201, 11.5%, 65.9%)
+  --color-white: hsl(0, 0%, 100%)
 
 *, *::before, *::after
   box-sizing: border-box
@@ -26,8 +29,194 @@ a
 ul, ol
   list-style: none
 
+img 
+  max-width: 100%
+  height: auto
+
 .wrapper
-  display: flex
-  justify-content: center
-  align-items: center
-  min-height: 100vh
+  padding-top: 123px
+  background: url('../images/bg-header-mobile.png') no-repeat top left/contain
+  @media (min-width: 48em)
+    background: url('../images/bg-header-desktop.png') no-repeat top left/contain
+    max-width: 90rem
+
+.clipboard
+  text-align: center
+  &-header
+    margin-bottom: 160px
+    padding: 0 42px
+  & h1,
+  & h2
+    margin: 64px 0 16px
+    font-size: 32px
+    line-height: 40px
+    letter-spacing: -0.521739px
+    color: var(--color-heading-primary)
+  & h2
+    margin-top: 0
+    font-size: 28px
+    line-height: 35px
+    letter-spacing: -0.456522px
+  & p
+    font-size: 16px
+    line-height: 26px
+    letter-spacing: 0.12px
+    color: var(--color-text-primary)
+  & .buttons
+    margin-top: 48px
+    display: flex
+    flex-direction: column
+    @media (min-width: 48em)
+      flex-direction: row
+      justify-content: center
+    &-ios,
+    &-mac
+      display: block
+      width: 311px
+      height: 56px
+      margin: 0 auto
+      font-weight: 600
+      font-size: 18px
+      line-height: 30px
+      letter-spacing: 0.5px
+      color: var(--color-white)
+      border-radius: 28px
+      cursor: pointer
+      @media (min-width: 48em)
+        width: 227px
+        margin: 0
+    &-ios
+      margin-bottom: 24px
+      background: hsl(170.7, 66.2%, 44.1%)
+      box-shadow: 0px 10px 20px rgba(137, 229, 199, 0.503305), inset 0px -3px 0px rgba(0, 0, 0, 0.151333)
+      @media (min-width: 48em)
+        margin-bottom: 0
+        margin-right: 16px
+    &-mac
+      background: hsl(232.8, 100%, 69%)
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.0988035), inset 0px -3px 0px rgba(0, 0, 0, 0.151333)
+  &-snippets
+    margin-bottom: 186px
+    @media (min-width: 48em)
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      margin-bottom: 100px
+    &-heading
+      @media (min-width: 48em)
+        flex-basis: 100%
+    & picture
+      @media (min-width: 48em)
+        flex-basis: 50%
+    &-heading,
+    &-text
+      padding: 0 42px
+    &-text
+      @media (min-width: 48em)
+        flex-basis: 50%
+    & p
+      margin-bottom: 48px
+    & img
+      margin: 17px 0 56px
+  &-anywhere
+    margin-bottom: 130px
+    &-heading
+      padding: 0 42px
+    & img
+      margin-top: 64px
+  &-supercharge
+    @media (min-width: 48em)
+      display: flex
+      flex-wrap: wrap
+      align-items: baseline
+    &-heading
+      margin-bottom: 90px
+      @media (min-width: 48em)
+        flex-basis: 100%
+    &-text
+      margin-bottom: 56px
+      @media (min-width: 48em)
+        flex-basis: 33.333%
+      & img
+        margin-bottom: 40px
+      & h3
+        margin-bottom: 18px
+        font-size: 24px
+        line-height: 30px
+        letter-spacing: -0.391304px
+        color: var(--color-heading-primary)
+  &-brands
+    margin-top: 131px
+    display: flex
+    flex-direction: column
+    align-items: center
+    @media (min-width: 48em)
+      flex-direction: row
+      justify-content: center
+    & img
+      max-width: 140px
+      margin-bottom: 70px
+      @media (min-width: 48em)
+        padding: 0 10px
+  &-downloads
+    margin-top: 100px
+    padding: 0 44px
+  footer
+    display: flex
+    flex-direction: column
+    margin-top: 170px
+    padding: 52px 0
+    color: var(--color-heading-primary)
+    background-color: hsl(180, 5.9%, 96.7%)
+    @media (min-width: 48em)
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      padding: 32px 16px
+    & > img
+      display: block
+      width: 55px
+      height: 55px
+      margin: 0 auto 40px
+      @media (min-width: 48em)
+        margin: 0
+    & .links
+      @media (min-width: 48em)
+        display: flex
+        flex-wrap: wrap
+        text-align: left
+    & .links a
+      display: block
+      font-size: 18px
+      line-height: 30px
+      @media (min-width: 48em)
+        flex-basis: 33.333%
+        &:nth-of-type(1)
+          order: 0
+        &:nth-of-type(3)
+          order: 1
+        &:nth-of-type(5)
+          order: 2
+        &:nth-of-type(2)
+          order: 3
+        &:nth-of-type(4)
+          order: 4
+      & + a
+        margin-top: 20px
+        @media (min-width: 48em)
+          margin-top: 0
+    & .socials
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-top: 50px
+      @media (min-width: 48em)
+        margin-top: 0
+      & a
+        margin: 0 20px
+        @media (min-width: 48em)
+          margin: 0 0 0 20px
+        
+      
+    
+
